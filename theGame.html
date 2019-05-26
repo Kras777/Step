@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        #queen {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: red;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            let leftPosition = 0;
+            let topPosition = 0;
+
+            document.onkeydown = function (event) {
+                if (event.key == 'ArrowRight') {
+                    leftPosition += 5;
+                    queen.style.left = leftPosition + "px";
+                }
+                if (event.key == 'ArrowLeft') {
+                    leftPosition -= 5;
+                    queen.style.left = leftPosition + "px";
+                }
+                if (event.key == 'ArrowUp') {
+                    topPosition -=5;
+                    queen.style.top = topPosition + "px";
+                }
+                if (event.key == 'ArrowDown') {
+                    topPosition +=5;
+                    queen.style.top = topPosition + "px";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="queen"></div>
+</body>
+</html>
